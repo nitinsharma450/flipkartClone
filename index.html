@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+
+    <div class="container-fluid">
+
+       <!--                   header start                     -->
+
+       
+
+            <div class="row d-flex justify-content-center align-items-center " >
+
+                <div class="col-2">
+                    <a href="">
+
+                        <img src="data:image/png;base64,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"
+                            alt="flipcart-logo" class="w-100">
+                    </a>
+                </div>
+
+                <div class="col">
+
+
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="fa fa-search "></i>
+                        </span>
+
+                        <input type="text" class="form-control" placeholder="Search for product brand and more">
+                    </div>
+                </div>
+                <div class="col-1 text-start d-flex justify-content-center align-content-center">
+
+                    <button class="btn btn-primary dropdown-toggle login-btn " data-bs-toggle="dropdown" >
+
+                        <i class="fa fa-address-book"></i>
+                        login
+                    </button>
+                </div>
+                <div class="col-1">
+
+                    <button class="btn btn-white dropdown-toggle" title="Cart">
+
+                        <i class="fas fa-cart-shopping"></i>
+                        Cart
+                    </button>
+                </div>
+                <div class="col-2">
+
+                    <button class="btn btn-white dropdown-toggle w-100" title="Become a Seller">
+
+                        <i class="fas fa-warehouse"></i>
+                        Become a Seller
+                    </button>
+                </div>
+
+            </div>
+        
+
+<!--                        header end                      -->
+
+
+
+<!--                        login section start                        -->
+
+
+<div class="login-container d-flex justify-content-center align-content-center" style="display: none !important;">
+
+    <div class="p-3" style="height: 500px; width: 250px ; background-color: rgba(28, 72, 232, 0.949);">
+
+        <div class="row ">
+            <div class="col text-white  ">
+                <h2>
+                    login
+                </h2>
+            </div>
+            
+        </div>
+
+        <div class="row">
+
+            <div class="col row  text-white mb-5">
+                <p>Get access to your Orders,<br>
+                     Wishlist and Recommendations</p>
+            </div>
+
+           
+        </div>
+
+        <div class="row ">
+
+            <div class="col  text-center mt-5 ">
+                <img src="/images/login-image.png" alt="login-image" class="w-100">
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="" style="height: 500px ; width: 400px; ">
+
+        <div class="row">
+            <div class="col-12 mt-5 p-4">
+                <input type="text" class="form-control" placeholder="Enter Mobile Number">
+            </div>
+
+            <div class="col-12 p-4">
+                <button class="btn btn-white text-white w-100 p-2    rounded-0" style="background-color: orangered;">
+                    Request OTP
+                </button>
+            </div>
+
+           
+        </div>
+
+    </div>
+</div>
+
+
+<!--                      items-grid start                         -->
+
+            <div class=" after-login mt-3 px-5">
+
+                <div class="row">
+
+
+
+
+
+                    <div class="col  header-grid">
+
+                        <div class="ratio ratio-1x1 " style="background-color: pink; width: 80px ; height: 80px;">
+
+
+                            <img src="\images\offer.jpg" alt="offer">
+                        </div>
+
+                        <strong>Top Offer</strong>
+                    </div>
+                    <div class="col-2 header-grid">
+
+                        <div class="ratio ratio-1x1 text-center"
+                            style="background-color: pink;width: 80px ; height: 80px;">
+
+                            <img src="\images\phone.jpg" alt="mobile">
+                        </div>
+
+                        <strong> Mobiles and Tablets</strong>
+                    </div>
+                    <div class="col-2 header-grid">
+
+                        <div class="ratio ratio-1x1" style="background-color: pink; width: 80px ; height:80px;">
+
+                            <img src="\images\machine.jpg" alt="washing">
+                        </div>
+
+                        <strong>Tvs and appliances</strong>
+                    </div>
+                    <div class="col header-grid">
+
+                        <div class="ratio ratio-1x1" style="background-color: pink; width: 80px ; height:80px;">
+
+                            <img src="\images\tv.jpg" alt="tv">
+                        </div>
+
+                        <strong>
+                            Electronic
+                        </strong>
+                    </div>
+                    <div class="col header-grid">
+
+                        <div class="ratio ratio-1x1" style="background-color: pink; width: 80px ; height:80px;">
+
+                            <img src="\images\fashion.jpg" alt="fashion">
+                        </div>
+
+                        <strong>fashion</strong>
+                    </div>
+                    <div class="col header-grid">
+
+                        <div class="ratio ratio-1x1" style="background-color: pink; width: 80px ; height:80px;">
+
+                            <img src="\images\food.jpg" alt="food">
+                        </div>
+
+                        <strong>Beauty,food</strong>
+                    </div>
+                    <div class="col header-grid">
+
+                        <div class="ratio ratio-1x1" style="background-color: pink; width: 80px ; height:80px;">
+
+                            <img src="\images\jar.jpg" alt="jar">
+                        </div>
+
+                        <strong>Home & Kitchen</strong>
+                    </div>
+                    <div class="col header-grid">
+
+                        <div class="ratio ratio-1x1" style="background-color: pink; width: 80px ; height:80px;">
+
+                            <img src="\images\furneture.jpg" alt="furneture">
+                        </div>
+
+                        <strong>
+                            Furniture
+                        </strong>
+                    </div>
+                    <div class="col header-grid">
+
+                        <div class="ratio ratio-1x1" style="background-color: pink; width: 80px ; height:80px;">
+
+                            <img src="\images\travel.jpg" alt="travel">
+                        </div>
+                        <strong>travel</strong>
+                    </div>
+
+
+                </div>
+            </div>
+<!--                             items-grid end                      -->
+
+
+
+<!--                             carousel start                        -->
+            <!-- Carousel -->
+            <div id="demo" class="carousel slide  after-login" data-bs-ride="carousel">
+
+                <!-- Indicators/dots -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="4"></button>
+                </div>
+
+                <!-- The slideshow/carousel -->
+                <div class="carousel-inner positon-relative">
+                    <div class="carousel-item active">
+
+                        <div class="carousel-color p-5">
+
+                            <div class="row">
+
+                                <div class="col text-end">
+                                    <img src="/images/carousel_phone.jpg" alt="phone" class="mx-4">
+                                </div>
+
+                                <div class="col text-start">
+                                    <h4>iphone 16</h4>
+                                    <h3>From 63,400*</h3>
+                                    <p>A18 chip.superfast,supermart <br> History Biggest price drop</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-color p-5">
+
+                            <div class="row">
+
+                                <div class="col text-end">
+                                    <img src="/images/carousel_phone.jpg" alt="phone" class="mx-4">
+                                </div>
+
+                                <div class="col text-start">
+                                    <h4>iphone 16</h4>
+                                    <h3>From 63,400*</h3>
+                                    <p>A18 chip.superfast,supermart <br> History Biggest price drop</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-color p-5">
+
+                            <div class="row">
+
+                                <div class="col text-end">
+                                    <img src="/images/carousel_phone.jpg" alt="phone" class="mx-4">
+                                </div>
+
+                                <div class="col text-start">
+                                    <h4>iphone 16</h4>
+                                    <h3>From 63,400*</h3>
+                                    <p>A18 chip.superfast,supermart <br> History Biggest price drop</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="carousel-color p-5">
+
+                            <div class="row">
+
+                                <div class="col text-end">
+                                    <img src="/images/carousel_phone.jpg" alt="phone" class="mx-4">
+                                </div>
+
+                                <div class="col text-start">
+                                    <h4>iphone 16</h4>
+                                    <h3>From 63,400*</h3>
+                                    <p>A18 chip.superfast,supermart <br> History Biggest price drop</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="carousel-color p-5">
+
+                            <div class="row">
+
+                                <div class="col text-end">
+                                    <img src="/images/carousel_phone.jpg" alt="phone" class="mx-4">
+                                </div>
+
+                                <div class="col text-start">
+                                    <h4>iphone 16</h4>
+                                    <h3>From 63,400*</h3>
+                                    <p>A18 chip.superfast,supermart <br> History Biggest price drop</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Left and right controls/icons -->
+                <button class=" btn btn-white position-absolute py-4 "  style="top: 100px; left: 0px; background-color: white !important;" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                    <i class="fas fa-angle-left text-primary"></i>
+                </button>
+                <button class="btn btn-primary position-absolute py-4" style="top: 100px; right:0px; background-color: white;" type="button" data-bs-target="#demo" data-bs-slide="next">
+                    <i class="fas fa-angle-right text-primary"></i>
+                </button>
+            </div>
+<!--                               carousel end                           -->
+
+
+<!--                 First-grid-section start                           -->
+
+
+<div class="row mt-3  after-login" id="row1">
+    
+
+    <div class="col ">
+
+        <div class="grid-color p-5">
+
+           
+
+            
+             <div class="row">
+
+                <div class="col">
+                    <p>Almonds,cashews & more</p>
+
+                    <h4>Dry fruits & nuts from rupees 149</h4>
+                </div>
+                <div class="col">
+
+                    <img src="/images/almond.jpg" alt="almond">
+                </div>
+             </div>
+          
+        </div>
+    </div>
+
+    <div class="col ">
+
+        <div class="grid-color p-5">
+             <div class="row">
+
+                <div class="col">
+                    <p>Almonds,cashews & more</p>
+
+                    <h4>Dry fruits & nuts from rupees 149</h4>
+                </div>
+                <div class="col">
+
+                    <img src="/images/almond.jpg" alt="almond">
+                </div>
+             </div>
+
+        </div>
+    </div>
+
+    <div class="col ">
+
+        <div class="grid-color p-5">
+             <div class="row">
+
+                <div class="col">
+                    <p>Almonds,cashews & more</p>
+
+                    <h4>Dry fruits & nuts from rupees 149</h4>
+                </div>
+                <div class="col">
+
+                    <img src="/images/almond.jpg" alt="almond">
+                </div>
+             </div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+<div class="row mt-3  after-login" id="row2">
+    
+
+    <div class="col ">
+
+        <div class="grid-color p-5">
+
+           
+
+            
+             <div class="row">
+
+                <div class="col">
+                    <p>Almonds,cashews & more</p>
+
+                    <h4>Dry fruits & nuts from rupees 149</h4>
+                </div>
+                <div class="col">
+
+                    <img src="/images/almond.jpg" alt="almond">
+                </div>
+             </div>
+          
+        </div>
+    </div>
+
+    <div class="col ">
+
+        <div class="grid-color p-5">
+             <div class="row">
+
+                <div class="col">
+                    <p>Almonds,cashews & more</p>
+
+                    <h4>Dry fruits & nuts from rupees 149</h4>
+                </div>
+                <div class="col">
+
+                    <img src="/images/almond.jpg" alt="almond">
+                </div>
+             </div>
+
+        </div>
+    </div>
+
+    <div class="col ">
+
+        <div class="grid-color p-5">
+             <div class="row">
+
+                <div class="col">
+                    <p>Almonds,cashews & more</p>
+
+                    <h4>Dry fruits & nuts from rupees 149</h4>
+                </div>
+                <div class="col">
+
+                    <img src="/images/almond.jpg" alt="almond">
+                </div>
+             </div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+<div class="row mt-3  after-login" id="row3">
+    
+
+    <div class="col ">
+
+        <div class="grid-color p-5">
+
+           
+
+            
+             <div class="row">
+
+                <div class="col">
+                    <p>Almonds,cashews & more</p>
+
+                    <h4>Dry fruits & nuts from rupees 149</h4>
+                </div>
+                <div class="col">
+
+                    <img src="/images/almond.jpg" alt="almond">
+                </div>
+             </div>
+          
+        </div>
+    </div>
+
+    <div class="col ">
+
+        <div class="grid-color p-5">
+             <div class="row">
+
+                <div class="col">
+                    <p>Almonds,cashews & more</p>
+
+                    <h4>Dry fruits & nuts from rupees 149</h4>
+                </div>
+                <div class="col">
+
+                    <img src="/images/almond.jpg" alt="almond">
+                </div>
+             </div>
+
+        </div>
+    </div>
+
+    <div class="col ">
+
+        <div class="grid-color p-5">
+             <div class="row">
+
+                <div class="col">
+                    <p>Almonds,cashews & more</p>
+
+                    <h4>Dry fruits & nuts from rupees 149</h4>
+                </div>
+                <div class="col">
+
+                    <img src="/images/almond.jpg" alt="almond">
+                </div>
+             </div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+
+<!--                              first-grid-section-end                           -->
+
+
+
+
+<!--                        travel essenatil picks start                    -->
+        <div class="row mt-5   after-login">
+
+            <div class="col">
+
+                <div class="row my-3">
+
+                    <div class="col"><h3>Travel Essentail Picks</h3></div>
+                    <div class="col text-end">
+
+                         <button class="btn btn-primary rounded-circle">
+                            <i class="fas fa-angle-right "></i>
+
+                         </button>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="col">
+
+                        <div class="col-border  text-center w-100 ">
+
+                            <button class="  hover-img btn btn-white mt-3"><img src="/images/footwear.jpg" alt="shoes">
+        
+                            
+                            </button>
+                            <p class="fs-5">Men's slipper</p>
+                            <Strong class="text-success">Min. 70% oFF</Strong>
+
+                        </div>
+                        
+                    </div>
+                    <div class="col">
+
+                        <div class="col-border  text-center w-100 ">
+
+                            <button class="  hover-img btn btn-white mt-3"><img src="/images/shoes.jpg" alt="shoes">
+        
+                            
+                            </button>
+                            <p class="fs-5">Men's shoes</p>
+                            <Strong class="text-success">Min. 70% oFF</Strong>
+
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="col">
+
+                        <div class="col-border  text-center w-100 ">
+
+                            <button class="  hover-img btn btn-white mt-3"><img src="/images/shoes.jpg" alt="shoes">
+        
+                            
+                            </button>
+                            <p class="fs-5">Men's shoes</p>
+                            <Strong class="text-success">Min. 70% oFF</Strong>
+
+                        </div>
+                        
+                    </div>
+
+                    <div class="col">
+
+                        <div class="col-border  text-center w-100 ">
+
+                            <button class="  hover-img btn btn-white mt-3"><img src="/images/shoes.jpg" alt="shoes">
+        
+                            
+                            </button>
+                            <p class="fs-5">Men's shoes</p>
+                            <Strong class="text-success">Min. 70% oFF</Strong>
+
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-7 position-relative">
+
+                <img src="/images/explore-phone.png" alt="phone" class="w-100 h-100">
+
+                <button class="btn btn-white d-flex flex-row justify-content-center align-items-center position-absolute" style="left: 100px; bottom: 40px; background-color: whitesmoke !important;">
+
+                    <h4>Explore now</h4>
+                    <i class="fas fa-angle-right mx-2"></i>
+                </button>
+            </div>
+        </div>
+<!--                              travel essenatial end                          -->
+
+            
+
+
+
+
+<div class="row  after-login">
+
+
+    <div class="col mt-4">
+
+
+        <div class="p-3" style="background-color:whitesmoke;">
+        
+
+        <div class="row my-3">
+
+            <div class="col-8"><h3>Travel Essentail Picks</h3></div>
+            <div class="col-4 text-end">
+
+                 <button class="btn btn-primary rounded-circle">
+                    <i class="fas fa-angle-right "></i>
+
+                 </button>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col">
+
+                <div class="col-border  text-center w-100 ">
+
+                    <button class="  hover-img btn btn-white mt-3"><img src="/images/footwear.jpg" alt="shoes">
+
+                    
+                    </button>
+                    <p class="fs-5">Men's slipper</p>
+                    <Strong class="text-success">Min. 70% oFF</Strong>
+
+                </div>
+                
+            </div>
+            <div class="col">
+
+                <div class="col-border  text-center w-100 ">
+
+                    <button class="  hover-img btn btn-white mt-3"><img src="/images/shoes.jpg" alt="shoes">
+
+                    
+                    </button>
+                    <p class="fs-5">Men's shoes</p>
+                    <Strong class="text-success">Min. 70% oFF</Strong>
+
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col">
+
+                <div class="col-border  text-center w-100 ">
+
+                    <button class="  hover-img btn btn-white mt-3"><img src="/images/shoes.jpg" alt="shoes">
+
+                    
+                    </button>
+                    <p class="fs-5">Men's shoes</p>
+                    <Strong class="text-success">Min. 70% oFF</Strong>
+
+                </div>
+                
+            </div>
+
+            <div class="col">
+
+                <div class="col-border  text-center w-100 ">
+
+                    <button class="  hover-img btn btn-white mt-3"><img src="/images/shoes.jpg" alt="shoes">
+
+                    
+                    </button>
+                    <p class="fs-5">Men's shoes</p>
+                    <Strong class="text-success">Min. 70% oFF</Strong>
+
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="col mt-4">
+        <div class="p-3" style="background-color:whitesmoke;">
+
+
+
+        <div class="row my-3">
+
+            <div class="col-8"><h3>Travel Essentail Picks</h3></div>
+            <div class="col-4 text-end">
+
+                 <button class="btn btn-primary rounded-circle">
+                    <i class="fas fa-angle-right "></i>
+
+                 </button>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col">
+
+                <div class="col-border  text-center w-100 ">
+
+                    <button class="  hover-img btn btn-white mt-3"><img src="/images/footwear.jpg" alt="shoes">
+
+                    
+                    </button>
+                    <p class="fs-5">Men's slipper</p>
+                    <Strong class="text-success">Min. 70% oFF</Strong>
+
+                </div>
+                
+            </div>
+            <div class="col">
+
+                <div class="col-border  text-center w-100 ">
+
+                    <button class="  hover-img btn btn-white mt-3"><img src="/images/shoes.jpg" alt="shoes">
+
+                    
+                    </button>
+                    <p class="fs-5">Men's shoes</p>
+                    <Strong class="text-success">Min. 70% oFF</Strong>
+
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col">
+
+                <div class="col-border  text-center w-100 ">
+
+                    <button class="  hover-img btn btn-white mt-3"><img src="/images/shoes.jpg" alt="shoes">
+
+                    
+                    </button>
+                    <p class="fs-5">Men's shoes</p>
+                    <Strong class="text-success">Min. 70% oFF</Strong>
+
+                </div>
+                
+            </div>
+
+            <div class="col">
+
+                <div class="col-border  text-center w-100 ">
+
+                    <button class="  hover-img btn btn-white mt-3"><img src="/images/shoes.jpg" alt="shoes">
+
+                    
+                    </button>
+                    <p class="fs-5">Men's shoes</p>
+                    <Strong class="text-success">Min. 70% oFF</Strong>
+
+                </div>
+                
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="col mt-4">
+        <div class="p-3" style="background-color:whitesmoke;">
+
+        
+        <div class="row my-3">
+
+            <div class="col-8"><h3>Travel Essentail Picks</h3></div>
+            <div class="col-4 text-end">
+
+                 <button class="btn btn-primary rounded-circle">
+                    <i class="fas fa-angle-right "></i>
+
+                 </button>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col">
+
+                <div class="col-border  text-center w-100 ">
+
+                    <button class="  hover-img btn btn-white mt-3"><img src="/images/footwear.jpg" alt="shoes">
+
+                    
+                    </button>
+                    <p class="fs-5">Men's slipper</p>
+                    <Strong class="text-success">Min. 70% oFF</Strong>
+
+                </div>
+                
+            </div>
+            <div class="col">
+
+                <div class="col-border  text-center w-100 ">
+
+                    <button class="  hover-img btn btn-white mt-3"><img src="/images/shoes.jpg" alt="shoes">
+
+                    
+                    </button>
+                    <p class="fs-5">Men's shoes</p>
+                    <Strong class="text-success">Min. 70% oFF</Strong>
+
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col">
+
+                <div class="col-border  text-center w-100 ">
+
+                    <button class="  hover-img btn btn-white mt-3"><img src="/images/shoes.jpg" alt="shoes">
+
+                    
+                    </button>
+                    <p class="fs-5">Men's shoes</p>
+                    <Strong class="text-success">Min. 70% oFF</Strong>
+
+                </div>
+                
+            </div>
+
+            <div class="col">
+
+                <div class="col-border  text-center w-100 ">
+
+                    <button class="  hover-img btn btn-white mt-3"><img src="/images/shoes.jpg" alt="shoes">
+
+                    
+                    </button>
+                    <p class="fs-5">Men's shoes</p>
+                    <Strong class="text-success">Min. 70% oFF</Strong>
+
+                </div>
+                
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+        </div>
+
+
+
+        <!--                 footer section start                     -->
+   
+
+        <div class="container-fluid bg-dark p-5">
+
+
+            <div class="container">
+
+  <div class="row">
+
+                <div class="col">
+
+                    <p style="color: rgb(90, 87, 87);"> <strong>
+                        ABOUT
+                    </strong></p>
+                  <p class="mb-0"> <a href="" class="text-white">about us</a></p>
+                  <p class="mb-0"> <a href="" class="text-white">contact us</a></p>
+                  <p class="mb-0"> <a href="" class="text-white">Careers</a></p>
+                  <p class="mb-0"> <a href="" class="text-white">Flipcart stories</a></p>
+                  <p class="mb-0"> <a href="" class="text-white">Corporate information</a></p>
+
+                </div>
+                <div class="col">
+
+                    <p  style="color: rgb(117, 114, 114);"> <strong>
+                        GROUP COMPANIES
+                    </strong></p>
+                <p class="mb-0"><a href="" class="text-white">myntra</a></p>
+                <p class="mb-0"><a href="" class="text-white">Cleartrip</a></p>
+                <p class="mb-0"><a href="" class="text-white"></a>shopsy</p>
+                
+                </div>
+                <div class="col">
+
+                    <p class="mb-3 " style="color: rgb(126, 124, 124);"> <strong>
+                    HELP
+                    </strong></p>
+                 <p class="mb-0"> <a href="" class="text-white">Payment </a></p>
+                 <p class="mb-0"> <a href="" class="text-white"> Shipping</a></p>
+                 <p class="mb-0"> <a href="" class="text-white">Cancellation and return </a></p>
+                 <p class="mb-0"> <a href="" class="text-white">FAQS </a></p>
+                </div>
+                <div class="col text-start>
+
+                    <p class="mb-3 " style="color: rgb(116, 112, 112);"> <strong>
+                      CONSUMER POLICY
+                    </strong></p>
+                  <p class="mb-0"> <a href="" class="text-white">Cancellation & return</a></p>
+                  <p class="mb-0"> <a href="" class="text-white">term of use</a></p>
+                  <p class="mb-0"> <a href="" class="text-white">security</a></p>
+                  <p class="mb-0"> <a href="" class="text-white">privacy</a></p>
+                  <p class="mb-0"> <a href="" class="text-white">sitemap</a></p>
+                  <p class="mb-0"> <a href="" class="text-white">ERP compliance</a></p>
+
+                </div>
+            
+                
+                <div class="col">
+
+                    <p class="mb-3 " style="color: rgb(107, 106, 106);"> <strong>
+                       mail us
+                    </strong></p>
+                  <p class="text-white">Flipcart internet private limited,<br>
+                  Building Alyssa , Begonia &<br>
+                  clove Embrassy Tech Village.
+                
+                </p>
+                <Strong class="mt-3" style="color: rgb(126, 125, 125);">
+                    Social:
+                </Strong>
+
+                <div class="row">
+
+                    <div class="col"><i class="fab fa-twitter-square text-white"></i></div>
+                    <div class="col"><i class="fab fa-facebook text-white"></i></div>
+                    <div class="col"><i class="fab fa-youtube text-white"></i></div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                </div>
+                </div>
+                <div class="col">
+
+                    <p class="mb-3 " style="color: rgb(124, 122, 122);"> <strong>
+                        Registration Office Address
+                    </strong></p>
+                  <p class="text-white">Lorem ipsum dolor sit amet consectetur.<br>
+                Lorem ipsum dolor sit amet consectetur<br>
+                Lorem ipsum dolor sit, amet consectetur adipisicing 
+                </p>
+
+                <p class="text-white">
+                    Telephone: <a href="">8800817720 </a>
+                </p>
+                </div>
+            </div>
+        </div>
+
+        <hr class="footer-horizontal-line">
+
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col footer-row">
+                    <i class="fas fa-warehouse" style="color:orange"></i>
+                    <p class="text-white mx-2">Become a Seller</p>
+                </div>
+                <div class="col footer-row">
+                    <i class="fas fa-meteor" style="color:orange"></i>
+                    <p class="text-white mx-2">Advertise</p>
+                </div>
+                <div class="col footer-row">
+                    <i class="fas fa-gift" style="color:orange"></i>
+                    <p class="text-white mx-2"> Gift card</p>
+                </div>
+                <div class="col footer-row">
+                    <i class="far fa-circle-question" style="color:orange"></i>
+                    <p class="text-white mx-2">Help Center</p>
+                </div>
+                <div class="col footer-row text-white">
+                    &copy;
+                    <p>2007-2025 Flipkart.com</p>
+                </div>
+                <div class="col"></div>
+            </div>
+        </div>
+
+        </div>
+        <!--                    footer section  end                     -->
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./scripy.js"></script>
+
+</body>
+
+</html>
